@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="RxDatasourceTest" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PropertyCell" rowHeight="131" id="3gF-EH-vep" customClass="PropertyCell" customModule="RxDatasourceTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="543" height="131"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3gF-EH-vep" id="p7k-Pu-pE5">
+                <rect key="frame" x="0.0" y="0.0" width="543" height="130.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Iuq-BS-P9f">
+                        <rect key="frame" x="20" y="11" width="503" height="109"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TaM-P0-ScU">
+                                <rect key="frame" x="0.0" y="0.0" width="249" height="109"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpS-6Z-p5F">
+                                <rect key="frame" x="254" y="0.0" width="249" height="109"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="Iuq-BS-P9f" secondAttribute="bottom" id="9EL-jo-1I5"/>
+                    <constraint firstItem="Iuq-BS-P9f" firstAttribute="leading" secondItem="p7k-Pu-pE5" secondAttribute="leadingMargin" id="JFt-ge-UuU"/>
+                    <constraint firstItem="Iuq-BS-P9f" firstAttribute="top" secondItem="p7k-Pu-pE5" secondAttribute="topMargin" id="PMn-kY-gTz"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Iuq-BS-P9f" secondAttribute="trailing" id="oR0-Jc-V9M"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="priceLabel" destination="SpS-6Z-p5F" id="7Oa-Ab-GVU"/>
+                <outlet property="typeLabel" destination="TaM-P0-ScU" id="Alr-I9-eBX"/>
+            </connections>
+            <point key="canvasLocation" x="-357.5" y="-67.5"/>
+        </tableViewCell>
+    </objects>
+</document>
