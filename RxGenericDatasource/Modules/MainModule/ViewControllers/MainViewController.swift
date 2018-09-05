@@ -47,6 +47,10 @@ class MainViewController: UIViewController {
         
         let sections: [MultipleSectionModel] = [MainViewModel.generateSection(header: "CITIES",
                                                                               items: collectionViewModel.generateItems(types: [.Cities])),
+                                                MainViewModel.generateSection(header: "CITIES 2",
+                                                                              items: collectionViewModel.generateItems(types: [.Cities])),
+                                                MainViewModel.generateSection(header: "CITIES 3",
+                                                                              items: collectionViewModel.generateItems(types: [.Cities])),
                                                 MainViewModel.generateSection(header: nil,
                                                                               items: collectionViewModel.generateItems(types: [.Cities, .Properties]))
         ]
