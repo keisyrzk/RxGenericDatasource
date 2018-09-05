@@ -30,6 +30,7 @@
 		5B7D0AAF213FD7F3008331BE /* PropertyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D0AAB213FD7F2008331BE /* PropertyCell.swift */; };
 		5B7D0AB0213FD7F3008331BE /* CityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B7D0AAC213FD7F3008331BE /* CityCell.xib */; };
 		5B7D0AB2213FD81C008331BE /* MultipleSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D0AB1213FD81C008331BE /* MultipleSectionModel.swift */; };
+		5B7D0AB6213FF4D7008331BE /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D0AB5213FF4D7008331BE /* CustomTableView.swift */; };
 		A610F8AB0F641502B6DE208D /* Pods_RxGenericDatasource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BEB7C48F1C36EA154B91745 /* Pods_RxGenericDatasource.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		5B7D0AAB213FD7F2008331BE /* PropertyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyCell.swift; sourceTree = "<group>"; };
 		5B7D0AAC213FD7F3008331BE /* CityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityCell.xib; sourceTree = "<group>"; };
 		5B7D0AB1213FD81C008331BE /* MultipleSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleSectionModel.swift; sourceTree = "<group>"; };
+		5B7D0AB5213FF4D7008331BE /* CustomTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
 		9702D02326A532C99CF37107 /* Pods-RxGenericDatasource.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxGenericDatasource.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxGenericDatasource/Pods-RxGenericDatasource.release.xcconfig"; sourceTree = "<group>"; };
 		B9618970DD3311EF7C6EB2BA /* Pods-RxGenericDatasource.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxGenericDatasource.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxGenericDatasource/Pods-RxGenericDatasource.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -212,6 +214,7 @@
 		5B7D0AA1213FD6F2008331BE /* GenericCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				5B7D0AB5213FF4D7008331BE /* CustomTableView.swift */,
 				5B7D0AA8213FD7BF008331BE /* Cells */,
 				5B7D0AA5213FD789008331BE /* CellConfigurator */,
 				5B7D0AA2213FD723008331BE /* ViewModel */,
@@ -375,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B7D0A91213FD41F008331BE /* RequestProtocol.swift in Sources */,
+				5B7D0AB6213FF4D7008331BE /* CustomTableView.swift in Sources */,
 				5B7D0A8C213FD39F008331BE /* Property.swift in Sources */,
 				5B7D0AAE213FD7F3008331BE /* CityCell.swift in Sources */,
 				5B7D0AA4213FD73E008331BE /* CollectionViewModel.swift in Sources */,

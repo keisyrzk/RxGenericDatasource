@@ -13,7 +13,7 @@ import RxSwift
 
 class MainViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: CustomTableView!
     
     var collectionViewModel: CollectionViewModel!
     let mainBag = DisposeBag()
@@ -55,34 +55,11 @@ class MainViewController: UIViewController {
                                                                               items: collectionViewModel.generateItems(types: [.Cities, .Properties]))
         ]
         
-        let datasource = MainViewController.seupDatasource()
+        let datasource = CustomTableView.seupDatasource()
         
         Observable.just(sections)
             .observeOn(MainScheduler.instance)
             .bind(to: tableView.rx.items(dataSource: datasource))
             .disposed(by: mainBag)
-        
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 140
-    }
-}
-
-extension MainViewController {
-    
-    static func seupDatasource() -> RxTableViewSectionedReloadDataSource<MultipleSectionModel> {
-        return RxTableViewSectionedReloadDataSource<MultipleSectionModel>(configureCell: { (datasource, table, idxPath, item) in
-            switch datasource[idxPath] {
-                
-            case let .GenericItem(cellConfigurator: cellConfigurator):
-                let cell = table.dequeueReusableCell(withIdentifier: type(of: cellConfigurator).reuseId)!
-                cellConfigurator.configure(cell: cell)
-                
-                return cell
-            }
-        },
-            titleForHeaderInSection: { datasource, index in
-            let section = datasource[index]
-            return section.header
-        })
     }
 }
