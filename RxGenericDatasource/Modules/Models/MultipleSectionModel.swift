@@ -119,32 +119,6 @@ struct GenericSection {
 ////////////////////
 // ITEMS DEFINITIONS
 
-struct CityItem {
-    
-    var name: String
-    var imageUrl: String
-    
-    init(name: String, imageUrl: String) {
-        
-        self.name = name
-        self.imageUrl = imageUrl
-    }
-}
-
-struct PropertyItem {
-    
-    var name: String
-    var price: String
-    var type: String
-    
-    init(name: String, price: String, type: String) {
-        
-        self.name = name
-        self.price = price
-        self.type = type
-    }
-}
-
 struct GenericItem {
     
     var cellConfigurator: CellConfigurator

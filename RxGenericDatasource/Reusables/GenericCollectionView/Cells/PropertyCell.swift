@@ -13,9 +13,9 @@ class PropertyCell: UITableViewCell, ConfigurableCell {
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
-    func configure(data: PropertyItem) {
+    func configure(data: Property) {
         
-        typeLabel.text = data.type
+        typeLabel.text = data.type.rawValue
         priceLabel.text = data.price
     }
     

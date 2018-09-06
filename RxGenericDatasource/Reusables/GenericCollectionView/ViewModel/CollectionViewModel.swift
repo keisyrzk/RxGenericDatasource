@@ -8,8 +8,8 @@
 
 import UIKit
 
-typealias CityCellConfig = CollectionCellConfigurator<CityCell, CityItem>
-typealias PropertyCellConfig = CollectionCellConfigurator<PropertyCell, PropertyItem>
+typealias CityCellConfig = CollectionCellConfigurator<CityCell, City>
+typealias PropertyCellConfig = CollectionCellConfigurator<PropertyCell, Property>
 
 class CollectionViewModel {
     
@@ -50,7 +50,7 @@ class CollectionViewModel {
         
         var items: [CellConfigurator] = []
         cityData.forEach { (city) in
-            items.append(CityCellConfig.init(item: CityItem(name: city.name, imageUrl: city.image)))
+            items.append(CityCellConfig.init(item: city))
         }
         return items
     }
@@ -60,7 +60,7 @@ class CollectionViewModel {
         var items: [CellConfigurator] = []
         cityData.forEach { (city) in
             city.property.forEach({ (property) in
-                items.append(PropertyCellConfig(item: PropertyItem(name: property.type.rawValue, price: property.price, type: property.type.rawValue)))
+                items.append(PropertyCellConfig(item: property))
             })
         }
         return items

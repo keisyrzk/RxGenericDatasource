@@ -14,10 +14,10 @@ class CityCell: UITableViewCell, ConfigurableCell {
     @IBOutlet weak var cityLabel: UILabel!
     
     
-    func configure(data: CityItem) {
+    func configure(data: City) {
         
         cityLabel.text = data.name
-        cityimage.getImage(from: data.imageUrl)
+        cityimage.getImage(from: data.image)
     }
     
     override func prepareForReuse() {
