@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct City: Codable {
+class City: Codable {
     
-    var name: String
-    var image: String
-    var population: String
-    var property_type: [String]
-    var property: [Property]
+    var name: String = ""
+    var image: String = ""
+    var population: String = ""
+    var property_type: [String] = []
+    var property: [Property] = []
 }

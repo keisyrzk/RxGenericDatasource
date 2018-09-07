@@ -43,17 +43,12 @@ class MainViewController: UIViewController {
     
     func setupCollectionView(fetchedData: [City]) {
         
-        collectionViewModel = CollectionViewModel(collection: tableView, cityData: fetchedData)
+        collectionViewModel = CollectionViewModel(collection: tableView)
         
-        let sections: [MultipleSectionModel] = [CollectionViewModel.generateSection(header: "CITIES",
-                                                                              items: collectionViewModel.generateItems(types: [.Cities])),
-                                                CollectionViewModel.generateSection(header: "CITIES 2",
-                                                                              items: collectionViewModel.generateItems(types: [.Cities])),
-                                                CollectionViewModel.generateSection(header: "CITIES 3",
-                                                                              items: collectionViewModel.generateItems(types: [.Cities])),
-                                                CollectionViewModel.generateSection(header: nil,
-                                                                              items: collectionViewModel.generateItems(types: [.Cities, .Properties]))
-        ]
+        let krakowProperties = fetchedData.filter{ $0.name == "Kraków" }.first?.property
+        let sections: [MultipleSectionModel] = [collectionViewModel.generateSection(header: "All fetched data", from: [fetchedData]),
+                                                collectionViewModel.generateSection(header: "Only Krakow properties", from: [krakowProperties!])
+                                               ]
         
         let datasource = CustomTableView.seupDatasource()
         

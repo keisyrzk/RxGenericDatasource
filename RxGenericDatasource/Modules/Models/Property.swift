@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Property: Codable {
+class Property: Codable {
     
     // NOTE! these enum names must fit those values comming from the JSON - these could be String, Int etc.
     enum PropertyType: String, Codable {
@@ -17,8 +17,8 @@ struct Property: Codable {
         case plot
     }
     
-    var type: PropertyType
-    var size: Int
-    var size_symbol: String
-    var price: String
+    var type: PropertyType = .house
+    var size: Int = 0
+    var size_symbol: String = ""
+    var price: String = ""
 }
