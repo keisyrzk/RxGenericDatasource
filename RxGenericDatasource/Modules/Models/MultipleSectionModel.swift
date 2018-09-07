@@ -80,29 +80,29 @@ extension MultipleSectionModel {
 ///////////////////////
 // SECTIONS DEFINITIONS
 
-struct CitySection {
-    
-    var header: String
-    var items: [SectionItem]
-    
-    init(header: String, items: [SectionItem]) {
-        
-        self.header = header
-        self.items = items
-    }
-}
-
-struct PropertySection {
-    
-    var header: String
-    var items: [SectionItem]
-    
-    init(header: String, items: [SectionItem]) {
-        
-        self.header = header
-        self.items = items
-    }
-}
+//struct CitySection {
+//    
+//    var header: String
+//    var items: [SectionItem]
+//    
+//    init(header: String, items: [SectionItem]) {
+//        
+//        self.header = header
+//        self.items = items
+//    }
+//}
+//
+//struct PropertySection {
+//    
+//    var header: String
+//    var items: [SectionItem]
+//    
+//    init(header: String, items: [SectionItem]) {
+//        
+//        self.header = header
+//        self.items = items
+//    }
+//}
 
 struct GenericSection {
     

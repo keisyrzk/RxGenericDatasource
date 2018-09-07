@@ -45,13 +45,13 @@ class MainViewController: UIViewController {
         
         collectionViewModel = CollectionViewModel(collection: tableView, cityData: fetchedData)
         
-        let sections: [MultipleSectionModel] = [MainViewModel.generateSection(header: "CITIES",
+        let sections: [MultipleSectionModel] = [CollectionViewModel.generateSection(header: "CITIES",
                                                                               items: collectionViewModel.generateItems(types: [.Cities])),
-                                                MainViewModel.generateSection(header: "CITIES 2",
+                                                CollectionViewModel.generateSection(header: "CITIES 2",
                                                                               items: collectionViewModel.generateItems(types: [.Cities])),
-                                                MainViewModel.generateSection(header: "CITIES 3",
+                                                CollectionViewModel.generateSection(header: "CITIES 3",
                                                                               items: collectionViewModel.generateItems(types: [.Cities])),
-                                                MainViewModel.generateSection(header: nil,
+                                                CollectionViewModel.generateSection(header: nil,
                                                                               items: collectionViewModel.generateItems(types: [.Cities, .Properties]))
         ]
         

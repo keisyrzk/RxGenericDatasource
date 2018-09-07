@@ -13,9 +13,11 @@ class CityCell: UITableViewCell, ConfigurableCell {
     @IBOutlet weak var cityimage: UIImageView!
     @IBOutlet weak var cityLabel: UILabel!
     
+    var data: City? = nil
     
     func configure(data: City) {
         
+        self.data = data
         cityLabel.text = data.name
         cityimage.getImage(from: data.image)
     }

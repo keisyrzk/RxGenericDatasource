@@ -16,6 +16,7 @@ protocol ConfigurableCell {
 protocol CellConfigurator {
     static var reuseId: String { get }
     func configure(cell: UIView)
+    func getCell() -> UIView
 }
 
 class CollectionCellConfigurator<CellType: ConfigurableCell, DataType>: CellConfigurator where CellType.DataType == DataType, CellType: UITableViewCell {
@@ -23,6 +24,7 @@ class CollectionCellConfigurator<CellType: ConfigurableCell, DataType>: CellConf
     static var reuseId: String { return String(describing: CellType.self) }
     
     let item: DataType
+    var cell: CellType? = nil
     
     init(item: DataType) {
         self.item = item
@@ -30,5 +32,10 @@ class CollectionCellConfigurator<CellType: ConfigurableCell, DataType>: CellConf
     
     func configure(cell: UIView) {
         (cell as! CellType).configure(data: item)
+        self.cell = (cell as! CellType)
+    }
+    
+    func getCell() -> UIView {
+        return self.cell!
     }
 }

@@ -45,7 +45,24 @@ class CustomTableView: UITableView {
         self.rx.itemSelected
             .subscribe(onNext: { (idxPath) in
                 if let selectedCell = self.cellForRow(at: idxPath) {
-                    //selectedCell.classForCoder
+                    print("CHOSEN CELL:  \(selectedCell.classForCoder)")
+                }
+            })
+        .disposed(by: localBag)
+        
+        self.rx.modelSelected(SectionItem.self)
+            .subscribe(onNext: { (sectionItem) in
+                switch sectionItem {
+                    
+                case let .GenericItem(cellConfigurator: cellConfigurator):
+                    let gotCell = cellConfigurator.getCell()
+                    
+                    if gotCell.isKind(of: CityCell.self) {
+                        print((gotCell as! CityCell).data?.name)
+                    }
+                    if gotCell.isKind(of: PropertyCell.self) {
+                        print((gotCell as! PropertyCell).data?.type.rawValue)
+                    }
                 }
             })
         .disposed(by: localBag)
