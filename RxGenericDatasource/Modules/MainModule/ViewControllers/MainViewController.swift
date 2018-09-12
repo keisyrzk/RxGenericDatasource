@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var tableView: CustomTableView!
     
-    var collectionViewModel: CollectionViewModel!
+    var tableViewModel: TableViewModel!
     let mainBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -33,7 +33,7 @@ class MainViewController: UIViewController {
         Services.getCities()
             .subscribe(onNext: { [weak self] (cities) in
                 DispatchQueue.main.async(execute: {
-                    self?.setupCollectionView(fetchedData: cities)
+                    self?.setupTableView(fetchedData: cities)
                 })
             }, onError: { (error) in
                 print(error.localizedDescription)
@@ -41,13 +41,13 @@ class MainViewController: UIViewController {
             .disposed(by: mainBag)
     }
     
-    func setupCollectionView(fetchedData: [City]) {
+    func setupTableView(fetchedData: [City]) {
         
-        collectionViewModel = CollectionViewModel(collection: tableView)
+        tableViewModel = TableViewModel(collection: tableView)
         
         let krakowProperties = fetchedData.filter{ $0.name == "Kraków" }.first?.property
-        let sections: [MultipleSectionModel] = [collectionViewModel.generateSection(header: "All fetched data", from: [fetchedData]),
-                                                collectionViewModel.generateSection(header: "Only Krakow properties", from: [krakowProperties!])
+        let sections: [MultipleSectionModel] = [tableViewModel.generateSection(header: "All fetched data", from: [fetchedData]),
+                                                tableViewModel.generateSection(header: "Only Krakow properties", from: [krakowProperties!])
                                                ]
         
         let datasource = CustomTableView.seupDatasource()

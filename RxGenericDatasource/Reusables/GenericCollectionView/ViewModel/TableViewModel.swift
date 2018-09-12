@@ -1,5 +1,5 @@
 //
-//  CollectionViewModel.swift
+//  TableViewModel.swift
 //  RxGenericDatasource
 //
 //  Created by Esteban on 05.09.2018.
@@ -11,7 +11,7 @@ import UIKit
 typealias CityCellConfig = CollectionCellConfigurator<CityCell, City>
 typealias PropertyCellConfig = CollectionCellConfigurator<PropertyCell, Property>
 
-class CollectionViewModel {
+class TableViewModel {
     
     init(collection: UITableView) {
                 
