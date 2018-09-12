@@ -1,0 +1,6 @@
+framework module Pods_RxGenericDatasource {
+  umbrella header "Pods-RxGenericDatasource-umbrella.h"
+
+  export *
+  module * { export * }
+}
